@@ -14,8 +14,9 @@ https://www.codeproject.com/Articles/5293980/Editor3D-A-Windows-Forms-Render-Con
 Logging was done with Innovate MotorSport LM2 Wideband O2 with the csv derived from the logworks software 
 available for thier product.
 
-csv file if raw data from the logger
+csv file if raw data from the logger.
 afrs.dat is just the average AFR values in an X/Y array.
 rpm_map_afr.dat are all the specs derived from the origional csv data set.
+D32 file is the origional Innovate MotorSport logging file extracted from the SD card.
 
 Note data set needs massaging for data points that are zero. 

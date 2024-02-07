@@ -14,6 +14,8 @@ https://www.codeproject.com/Articles/5293980/Editor3D-A-Windows-Forms-Render-Con
 Logging was done with Innovate MotorSport LM2 Wideband O2 with the csv derived from the logworks software 
 available for thier product.
 
+![image](https://github.com/myupctoys/AFR-Data-Sets/assets/5317221/7bcab097-09f3-4e65-8ad8-a53c6a580db0)
+
 csv file if raw data from the logger.
 afrs.dat is just the average AFR values in an X/Y array.
 rpm_map_afr.dat are all the specs derived from the origional csv data set.

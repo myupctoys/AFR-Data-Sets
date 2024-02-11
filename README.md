@@ -35,7 +35,7 @@ This is closer to what I hope for. Still not right but closer.<BR>
 ![image](https://github.com/myupctoys/AFR-Data-Sets/assets/5317221/7c0cd211-073b-4d7d-8a10-aec4968f331f)
 
 The problem with the first image is the "zero" data points and the polygon surface corresponding to the surrounding "real"
-data point distorts the underlying data "trend for want of a btter word" visually. The second image is the same data set, with the 0 data points changed to an average of the array,
+data point distorts the underlying data "trend for want of a better word" visually. The second image is the same data set, with the 0 data points changed to an average of the array,
 array drawn, then the original 0 data points (now an average) deleted. Note still not valid but intuitively makes more sense.
 
 When I come up with a better way of altering those 0 data points I will post an image. Have tried a few vairaions on the theme of liner, bilinear, bicuibic with the above "avarge for the zero points; but not happy with the resutls.

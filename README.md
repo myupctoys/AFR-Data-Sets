@@ -23,20 +23,20 @@ rpm_map_afr.dat are all the specs derived from the origional csv data set.<br>
 D32 file is the origional Innovate MotorSport logging file extracted from the SD card.<br>
 
 # Hope for the plot
-What I'm hoping for with the software is a 3D rendition of the above 2D array of data, assumed a bit of lateral thiking one might be able to draw that conclusion.
-This data set is incomplete purely as a function of the way a car might operate. While it is car specific, there are many examples 
+What I'm hoping for with the software is a partial 3D rendition of the above 2D array of data, assumed a bit of lateral thinking one might be able to draw that conclusion.
+This data set is incomplete purely as a function of the way a car might operate. While it is vehicle specific, there are many examples 
 in the real world where there would be incomplete data sets one might want to be able to get a feel for in the third 
 dimension. Physics experiments, tomography, point clouds etc etc.
 
 Currently the above data array looks like below.<BR>
-![image](https://github.com/myupctoys/AFR-Data-Sets/assets/5317221/c40eb818-a7a9-4312-a484-e1e486d1a13d)
+<img src="https://github.com/myupctoys/AFR-Data-Sets/assets/5317221/c40eb818-a7a9-4312-a484-e1e486d1a13d" width="600">
 
 Below is closer to what I hope for. Still not right but closer.<BR>
-![image](https://github.com/myupctoys/AFR-Data-Sets/assets/5317221/7c0cd211-073b-4d7d-8a10-aec4968f331f)
+<img src="https://github.com/myupctoys/AFR-Data-Sets/assets/5317221/7c0cd211-073b-4d7d-8a10-aec4968f331f" width="600">
 
 The problem with the first image is the "zero" data points and the polygon surface corresponding to the surrounding "real"
-data point distorts the underlying data "trend for want of a better word" visually. The second image is the same data set, with the 0 data points changed to an average of the array,
-array drawn, then the original 0 data points (now an average) deleted. Note still not valid but intuitively makes more sense.
+data point distorts the surrounding data "trend for want of a better word" visually. The second image is the same data set, with the 0 data points changed to an average of the array,
+array drawn, then the original 0 data points (now an average) deleted. Note still not valid but intuitively feels closer.
 
 When I come up with a better way of altering those 0 data points I will post an image. Have tried a few variations on the theme of liner, nearest neighbour, bilinear, bi-cuibic but not happy with the results.
 While modifying the data sets isn't ideal, one isn't modifying the real data. Purely massaging the 0 so that they are more sympathetic to the values of the real data points surrounding and in contact with that zero so that within

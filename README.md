@@ -23,7 +23,7 @@ rpm_map_afr.dat are all the specs derived from the origional csv data set.<br>
 D32 file is the origional Innovate MotorSport logging file extracted from the SD card.<br>
 
 # Hope for the plot
-What I'm hoping for with the software is a partial 3D rendition of the above 2D array of data, assumed a bit of lateral thinking one might be able to draw that conclusion.
+What I'm hoping for with the software is a partial 3D rendition of the above 2D array of data.
 This data set is incomplete purely as a function of the way a car might operate. While it is vehicle specific, there are many examples 
 in the real world where there would be incomplete data sets one might want to be able to get a feel for in the third 
 dimension. Physics experiments, tomography, point clouds etc etc.
@@ -32,13 +32,49 @@ The problem with the first image is the "zero" data points and the polygon surfa
 data point distorts the polygon surface "trend for want of a better word" visually. The second image is the same data set, with the 0 data points changed to an average of the array,
 array drawn, then the original 0 data points (now an average) deleted. Note still not valid but intuitively feels closer.
 
-When I come up with a better way of altering those 0 data points I will post an image. Have tried a few variations on the theme of liner, nearest neighbour, bilinear, bi-cuibic but not happy with the results.
-While modifying the data sets isn't ideal, one isn't modifying the real data. Purely massaging the 0 so that they are more sympathetic to the values of the real data points surrounding and in contact with that zero so that within
-the constraints of the charting software the polygon surface makes more sense visually. Understand why in so far as the need for four points to make up the polygon surface and that isn't working when one or more of those points is zero. Think there would be a way but I havn't landed on it yet.
-
 Currently the above 2D data array looks like below.<BR>
 <img src="https://github.com/myupctoys/AFR-Data-Sets/assets/5317221/c40eb818-a7a9-4312-a484-e1e486d1a13d" width="600">
 
 Below is closer to what I hope for. Still not right but closer.<BR>
 <img src="https://github.com/myupctoys/AFR-Data-Sets/assets/5317221/7c0cd211-073b-4d7d-8a10-aec4968f331f" width="600">
+# Problem defined
+# Baseline Scenario
+Note the arrays show the data points and the corrpesondng polygon surface that relates to the surrounding data points.<BR>
+<img src="https://github.com/myupctoys/AFR-Data-Sets/assets/5317221/de0da9ac-b4ac-4a87-b810-eef6e38c803b" height="200">
+<BR>Above data set corresponds visually to a flat surface set of polygons. Makes sense.<BR>
+<img src="https://github.com/myupctoys/AFR-Data-Sets/assets/5317221/6691ee5b-a5ad-4b7c-87bd-562798f8b943" height="200">
+
+# Scenario #1
+<img src="https://github.com/myupctoys/AFR-Data-Sets/assets/5317221/80394bdd-5fbd-4a35-80f2-e79afd67b690" height="200">
+We lose one data point at the edge of an array, corresponds to two polygon surfaces being altered.
+<img src="https://github.com/myupctoys/AFR-Data-Sets/assets/5317221/294f9534-ee95-42e8-a143-b736a27077f2" height="150">
+
+# Scenario #2
+<img src="https://github.com/myupctoys/AFR-Data-Sets/assets/5317221/82568331-c576-40ce-ba6b-c981375a0151" height="150">
+
+<BR>Still only the loss of one data point but in the middle of the array, we loose detail on four polygon surfaces.
+<img src="https://github.com/myupctoys/AFR-Data-Sets/assets/5317221/821e3a40-b8fd-4314-9712-ab68d72b24c6" height="200">
+Scenario #3
+	X0		X1		X2		X3
+Y0	9.1		9.1		9.1		9.1
+		 		 		 	
+Y1	9.1		0		9.1		9.1
+		 		 		 	
+Y2	9.1		9.1		9.1		9.1
+		 		 		 	
+Y3	9.1		9.1		0		9.1
+		 		 		 	
+Y3	9.1		9.1		9.1		9.1
+		 		 		 	
+Y3	9.1		9.1		9.1		9.1
+
+With the loss of two data points we lose surface polygon detail from 8 squares.
+
+
+While the charting software can only but run with the data presented to it, as far as it’s concerned a zero value being just as valid a data point as any other value. Understand the fact that each polygon is defined by the four surrounding data points, and my question was based around how to get around the visual problem if one of them was zero, in the case of the sample set, missing.
+Simple enough to delete all the zero points but one also looses a lot of the surface polygon visual information from points that are valid (as shown above), especially when that data set might have a lot of edge cases and one-off isolated data points that are missing as detailed above.
+Full data set then the chart is perfect. Partial data set and quite a bit of visual content is lost if deleted, or at best visually distorting the real data points that surround an unwanted data point to up to 4 polygon surfaces per missing data point.
+My question was simply to ask your thoughts on the topic. Which you answered to my satisfaction in so far as the four data points being needed to define that polygon therefore deleting or modifying that data point wasn’t a solution if polygon surfaces were part of the picture. The problem isn’t with the software, more that the current approach with the software, if missing data points needed to be catered for; isn’t a solution.
+
+
 
